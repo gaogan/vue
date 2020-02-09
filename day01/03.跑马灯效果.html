@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div class="app">
+        <input type="button" value="开始" @click="move">
+        <input type="button" value="停止" @click="stop">
+        <h4>{{taici}}</h4>
+    </div>
+</body>
+<script>
+    // 在vue实例中，如果要获取data上的数据，或者想要用methods中的方法，必须通过this.数据属性名，或者this.方法名，进行访问
+    let vm = new Vue({
+        el: ".app",
+        data: {
+            taici: '接受审判吧',
+            timer: null,
+            cur:true
+        },
+        methods: {
+            move() {
+                if(this.cur){
+                    this.timer = setInterval( ()=> {
+                        console.log(this);
+                        let arr = this.taici;
+                        let new_arr = "";
+                        let init_head;
+                        console.log(this.taici);
+                        let start = arr.substring(0, 1);
+                        let end = arr.substring(1);
+                        new_arr = end + start;
+                        this.taici = new_arr;
+                        console.log(this.taici);
+                    },100)
+                    this.cur=!this.cur;
+                }
+            },
+            stop(){
+                clearInterval(this.timer);
+                this.cur=!this.cur;
+            }
+        }
+    })
+</script>
+<script type="text/javascript">
+function copyUrl2()
+    {
+        var Url2=document.getElementById("biao1").innerText;
+        var oInput = document.createElement('input');
+        oInput.value = Url2;
+        document.body.appendChild(oInput);
+        oInput.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+        alert('复制成功');
+    }
+</script>
+<div cols="20" id="biao1">12345678</div>
+<input type="button" onClick="copyUrl2()" value="点击复制代码" />
+</html>
