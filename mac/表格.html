@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/css">
+  	  .tableBox {
+	    width: 400px;
+	    background: #fff;
+	    font-size: 14px;
+	  }
+	  .tableBox table {
+	    width: 100%;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	  }
+
+	  .tableBox th,
+	  td {
+	    border: 1px solid #ccc;
+	    width: 50%;
+	    height: 55px;
+	    line-height: 55px;
+	    padding: 0 15px;
+	    -ms-text-align-last: left;
+	    text-align-last: left;
+
+	  }
+	  .tableBox th{
+	  	background: #f2f2f2;
+	  	font-weight: bold;
+	  }
+	  .tableBox select{
+	  	width: 80%;
+	  	font-size: 18px;
+	  	height: 36px;
+	  }
+	  .typeWrap{
+	  	/*display: none;*/
+	  }
+
+  </style>
+</head>
+
+<body>
+  <div class="tableBox">
+        <table>
+          <tbody>
+            <tr>
+              <th>描述</th>
+              <th>名称</th>
+            </tr>
+            <tr>
+              <td>案件数量</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>便民电话数量</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>路灯</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>井盖</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>志愿者数量</td>
+              <td>100</td>
+            </tr>
+            <tr class="typeWrap">
+              <th>所属类别</th>
+              <th class="typeBox">
+                <select value="333">
+                  <option value="111">请选择类别</option>
+                  <option value="222">路灯1</option>
+                  <option selected value="333" >路灯2</option>
+                  <option value="111">路灯3</option>
+                  <option value="111">路灯4</option>
+                </select>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <script type="text/javascript">
+      	// var list = data.list;
+      	// var contentHtml="";
+      	// contentHtml+='<select>'
+      	// for (var i = 0; i < list.length; i++) {
+      	// 	contentHtml+='<option>'+list[i].xx+'</option>'
+      	// }
+       //  contentHtml+='</select>'
+      	// $(".typeBox").html(contentHtml)
+      </script>
+</body>
+
+</html>
