@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-router@3.1.5/dist/vue-router.js"></script>
+    <style>
+        .v-leave-to,
+        .v-enter{
+            opacity: 0;
+            transform: translateX(140px);
+        }
+        .v-enter-active,
+        .v-leave-active{
+            transition: all .5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="module">{{text}}
+        <transition mode="out-in">
+    		<router-view></router-view>
+        </transition>
+		<!-- <a href="#/login" tag="span">登录</a> -->
+		<!-- <a href="#/register" >注册</a> -->
+        <router-link to="/login" tag="span">登录</router-link>
+        <router-link to="/register">注册</router-link>
+    </div>
+</body>
+<script>
+    var login = {
+        template:"<div>这是一个登录组件</div>"
+    }
+    var register = {
+        template:"<div>这是一个注册组件</div>"
+    }
+    var routerObj = new VueRouter({
+        routes:[
+            {
+                path:"/",
+                // component: login
+                redirect:"/login"   
+            },
+            {
+                path:"/login",
+                component: login
+            },
+            {
+                path:"/register",
+                component: register
+            },
+        ],
+        linkActiveClass:"acccc"
+    })
+    var vm = new Vue({
+        el:"#module",
+        data:{
+            text:"hello world",
+        },
+        methods:{
+        },
+        router:routerObj
+    })
+</script>
+</html>

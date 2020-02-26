@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    
+</head>
+<body>
+    <div id="module">{{text}}</div>
+    <router-view></router-view>
+</body>
+<script>    
+    var login = {
+        templete:"<div>这是一个组件</div>"
+    }
+    var routerObj=new VueRouter({
+        routes:[
+            {
+                path:"/login",
+                compenent: login
+            }
+        ]
+    })
+    var app = new Vue({
+        el:"#module",
+        data:{
+            text:"hello world",
+            router:routerObj
+        },
+    })
+</script>
+</html>

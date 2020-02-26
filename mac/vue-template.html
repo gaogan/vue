@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>template</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    
 </head>
 <body>
-    <div id="module">{{text}}</div>
+    <div id="app">
+        <div>{{text}}</div>
+        
+    </div>
 </body>
 <script>
-    var app = new Vue({
-        el:"#module",
+    var vm = new Vue({
+        el:"#app",
         data:{
             text:"hello world"
         }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>路由传参</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+	    <router-view></router-view>
+	    <router-link to="/login?id=1&name='张三">登录</router-link>
+	    <router-link to="/regist">注册</router-link>
+    </div>
+</body>
+<script>
+	var login = {
+		template:"<div>登录模块--{{$route.query.id}}{{$route.query.name}}</div>",
+		created:function(){
+			console.log(this)
+			console.log(this.$router)
+			console.log(this.$route)
+		}
+	}
+	var regist = {
+		template:"<div>注册模块</div>"
+	}
+	var router= new VueRouter({
+		routes:[
+			{path:"/",redirect:"/login"},
+			{path:"/login",component:login},
+			{path:"/regist",component:regist},
+		]
+	})
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            text:"hello world"
+        },
+        router:router
+    })
+</script>
+</html>
