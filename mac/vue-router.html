@@ -21,6 +21,7 @@
 </head>
 <body>
     <div id="module">{{text}}
+        <div @click="alert()">btn</div>
         <transition mode="out-in">
     		<router-view></router-view>
         </transition>
@@ -61,6 +62,9 @@
             text:"hello world",
         },
         methods:{
+            alert(){
+                alert(123)
+            }
         },
         router:routerObj
     })
