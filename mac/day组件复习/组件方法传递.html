@@ -11,22 +11,27 @@
 
 <body>
     <div id="app">
-        <div class="">
-            <div class="btn" @click="changeModule('login')">登录</div>
-            <div class="btn" @click="changeModule('register')">注册</div>
-            <div class="btn" @click="changeModule('correct')">修改</div>
-        </div>
-        <component :is="type"></component>
+        <com @func="show"></com>
+        
     </div>
+    <template id="tempA">
+        <div>
+            <input type="button" value="测试点击父组件的方法" @click="myclick()">
+        </div>
+    </template>
     <script>
-        Vue.component("login",{
-            template:"<div>登录组件</div>"
-        })
-        Vue.component("register",{
-            template:"<div>注册组件</div>"
-        })
-        Vue.component("correct",{
-            template:"<div>修改组件</div>"
+        Vue.component("com",{
+            template:"#tempA",
+            data() {
+                return {
+                    list:{name:"张三",age:18}
+                }
+            },
+            methods: {
+                myclick(){
+                    this.$emit("func",this.list.name)
+                }
+            },
         })
         const vm = new Vue({
             el: '#app',
@@ -36,8 +41,8 @@
                 }
             },
             methods: {
-                changeModule(type){
-                    this.type=type
+                show(type){
+                    console.log("父组件的方法-----"+type);
                 }
             }
         });
