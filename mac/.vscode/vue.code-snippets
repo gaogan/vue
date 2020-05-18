@@ -1,0 +1,264 @@
+{
+	// Place your 全局 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	//     "scope": "javascript,typescript",
+	//     "prefix": "log",
+	//     "body": [
+	//         "console.log('$1');",
+	//         "$2"
+	//     ],
+	//     "description": "Log output to console"
+	// },
+	"vh": {
+		"prefix": "vh1", // 触发的关键字 输入vh按下tab键
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"",
+			"<head>",
+			"    <meta charset=\"UTF-8\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+			"    <title>Document</title>",
+			"    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js'></script>",
+			"</head>",
+			"",
+			"<body>",
+			"    <div id=\"app\">",
+			"		",
+			"	</div>"
+			"	<script>",
+			"		const vm = new Vue({",
+			"			el: '#app',",
+			"			data() {",
+			"				return {",
+			"					",
+			"				}",
+			"			},",
+			"			methods: {",
+			"				$0",
+			"			}",
+			"		});",
+			"	</script>",
+			"</body>",
+			"",
+			"</html>",
+		],
+		"description": "vh components"
+	},
+	// "set script": { // 片段名称
+	// 	"prefix": "scr1", // 输入script触发联想提升
+	// 	"body": [ // 确认后添加的代码
+	// 		"<script type='text/javascript'>",
+	// 		"$0", // $0代表光标最后停留的位置
+	// 		"</script>"
+	// 	],
+	// 	"description": "set_script" // 声明JS脚本语言
+	// },
+	// "set script2": { // 片段名称
+	// 	"prefix": "scr2", // 输入script触发联想提升
+	// 	"body": [ // 确认后添加的代码
+	// 		"<script type='text/babel'>",
+	// 		"$0", // $0代表光标最后停留的位置
+	// 		"</script>"
+	// 	],
+	// 	"description": "set_script" // 声明babel脚本语言
+	// },
+	// "set querySelector": {
+	// 	"prefix": "dq",
+	// 	"body": [ // 确认后添加的代码
+	// 		"document.querySelector('$0')",
+	// 	],
+	// 	"description": "set_querySelector" // 提示的内容
+	// },
+	// "set querySelectorAll": {
+	// 	"prefix": "dqa",
+	// 	"body": [ // 确认后添加的代码
+	// 		"document.querySelectorAll('$0')",
+	// 	],
+	// 	"description": "set_querySelectorAll" // 提示的内容
+	// },
+	// "set getElementById": {
+	// 	"prefix": "dgetId",
+	// 	"body": [ // 确认后添加的代码
+	// 		"document.getElementById('$0')",
+	// 	],
+	// 	"description": "set_getElementById" // 提示的内容
+	// },
+	// "set consoleLog": {
+	// 	"prefix": "cl",
+	// 	"body": [ // 确认后添加的代码
+	// 		"console.log($0)",
+	// 	],
+	// 	"description": "set_consoleLog" // 提示的内容
+	// },
+	// "set metaVp": {
+	// 	"prefix": "meta:vp",
+	// 	"body": [ // 确认后添加的代码
+	// 		"<meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>",
+	// 	],
+	// 	"description": "set_metaVp" // 提示的内容
+	// },
+	// "set resetCss": {
+	// 	"prefix": "r",
+	// 	"body": [ // 确认后添加的代码
+	// 		"*{margin:0;padding:0}",
+	// 	],
+	// 	"description": "set_resetCss" // 提示的内容
+	// },
+	// "df": {
+	// 	"prefix": "df",
+	// 	"body": [
+	// 		"()=>{",
+	// 		"  //输入函数体$1",
+	// 		"}",
+	// 	],
+	// 	"description": "箭头函数"
+	// },
+	// "vf": {
+	// 	"prefix": "vf",
+	// 	"body": [
+	// 		"(){",
+	// 		"  $1",
+	// 		"}",
+	// 	],
+	// 	"description": "vue 中methods里边的回调函数"
+	// },
+	// "f1": {
+	// 	"prefix": "f1",
+	// 	"body": [
+	// 		"for (var i=0; i<xxxxxxx.length; i++ ){",
+	// 		"  //循环体内容$1",
+	// 		"}",
+	// 	],
+	// 	"description": "for循环1"
+	// },
+	// "f2": {
+	// 	"prefix": "f2",
+	// 	"body": [
+	// 		"for (var j=0; j<xxxxxxx.length; j++ ){",
+	// 		"  //循环体内容$1",
+	// 		"}",
+	// 	],
+	// 	"description": "for循环2"
+	// },
+	// "fori": {
+	// 	"prefix": "fori",
+	// 	"body": [
+	// 		"for (let index in arr){",
+	// 		"  console.log(arr[index])",
+	// 		"}",
+	// 	],
+	// 	"description": "for-in遍历"
+	// },
+	// "did": {
+	// 	"prefix": "did",
+	// 	"body": [
+	// 		"document.getElementById('$1')"
+	// 	],
+	// 	"description": "document.getElementById"
+	// },
+	// "dtag": {
+	// 	"prefix": "dtag",
+	// 	"body": [
+	// 		"document.getElementsByTagName('$1')"
+	// 	],
+	// 	"description": "document.getElementsByTagName"
+	// },
+	// "jw": {
+	// 	"prefix": "jw",
+	// 	"body": [
+	// 		"javascript:;"
+	// 	],
+	// 	"description": "javascript:;"
+	// },
+	// "demo": {
+	// 	"prefix": "demo",
+	// 	"body": [
+	// 		"function demo (){",
+	// 		"console.log($1)",
+	// 		"}"
+	// 	],
+	// 	"description": "箭头函数"
+	// },
+	// "Print to console": {
+	// 	"prefix": "vue",
+	// 	"body": [
+	// 		"<template>",
+	// 		"    <div>\n",
+	// 		"    </div>",
+	// 		"</template>\n",
+	// 		"<script>",
+	// 		"export default {",
+	// 		"    name:'name',",
+	// 		"    props: {\n",
+	// 		"    },",
+	// 		"    data() {",
+	// 		"        return {\n",
+	// 		"        };",
+	// 		"    },",
+	// 		"    components: {\n",
+	// 		"    },",
+	// 		"};",
+	// 		"</script>\n",
+	// 		"<style lang='stylus' scoped>\n",
+	// 		"</style>\n",
+	// 	],
+	// 	"description": "Create vue template"
+	// },
+	// "set vuestyle": { // 片段名称
+	// 	"prefix": "sty", // 输入style触发联想提升
+	// 	"body": [ // 确认后添加的代码
+	// 		"<style lang='scss' scoped>",
+	// 		"$0", // $0代表光标最后停留的位置
+	// 		"</style>"
+	// 	],
+	// 	"description": "set_style" // 
+	// },
+	// "create vuex": { // 创建vuex仓库
+	// 	"prefix": "vuex", // 输入vuex触发联想提升
+	// 	"body": [ // 确认后添加的代码
+	// 		"export default new Vue.Store({",
+	// 		"    state: {",
+	// 		"       count:666",
+	// 		"    },",
+	// 		"    getters: {\n",
+	// 		"    },",
+	// 		"    mutations: {\n",
+	// 		"    },",
+	// 		"    actions: {\n",
+	// 		"    },",
+	// 		"});",
+	// 	],
+	// 	"description": "create_vuex" // 
+	// },
+	// "create store": { // 创建vuex仓库
+	// 	"prefix": "ck", // 输入vuex触发联想提升
+	// 	"body": [ // 确认后添加的代码
+	// 		"import state from './state.js'",
+	// 		"import getters from './getters.js'",
+	// 		"import mutations from './mutations.js'",
+	// 		"import actions from './actions.js'",
+	// 		"export default new Vuex.Store({",
+	// 		"    state,",
+	// 		"    getters,",
+	// 		"    mutations,",
+	// 		"    actions,",
+	// 		"});",
+	// 	],
+	// 	"description": "create_vuex" // 
+	// },
+	// "Angle brackets": { //尖括号
+	// 	"prefix": "ls",
+	// 	"body": [
+	// 		"<template$0 />"
+	// 	],
+	// 	"description": "Create vue Angle brackets"
+	// }
+}

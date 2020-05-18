@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button-counter2 v-bind:lastrecords="lastrecords"></button-counter2>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script>
+        // Vue.component("button-counter2", {
+        //     data() {
+        //         return {
+        //             conunt: 0,
+        //         };
+        //     },
+        //     template: '<div class="ben" @click="conunt++">点击{{conunt}}次  上次记录 {{lastrecords}}次</div>',
+        //     props:["lastrecords"],
+        // });
+        let vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    lastrecords:10
+                };
+            },
+            methods: {},
+            components:{
+                "button-counter2": {
+                    data() {
+                        return {
+                            conunt: 1,
+                        };
+                    },
+                        template: '<div class="ben" @click="conunt++">点击{{conunt}}次  上次记录 {{lastrecords}}次</div>',
+                        props: ["lastrecords"],
+                    }
+            }
+        });
+    </script>
+</body>
+
+</html>
